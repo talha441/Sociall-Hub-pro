@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>👋 Welcome to your Dashboard</h2>
+  <p>Logged in as: <b><?php session_start(); echo $_SESSION["name"] ?? 'Unknown'; ?></b></p>
+  <a href="logout.php">Logout</a>
+</body>
+</html>
