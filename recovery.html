@@ -1,0 +1,42 @@
+<!-- recovery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Recovery | SocialPro Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Account Recovery Form</h2>
+    <p>Fill out this form to request help for recovering your Facebook, Instagram, Gmail, or YouTube account.</p>
+    
+    <form action="submit_recovery.php" method="POST">
+      <label for="platform">📱 Platform:</label>
+      <select name="platform" id="platform" required>
+        <option value="">Select one</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Gmail">Gmail</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Telegram">Telegram</option>
+      </select>
+
+      <label for="name">👤 Full Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">📧 Email Address:</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="username">🔎 Username / Profile Link:</label>
+      <input type="text" name="username" id="username" required />
+
+      <label for="details">📝 Issue Details:</label>
+      <textarea name="details" id="details" rows="5" required></textarea>
+
+      <button type="submit">📨 Submit Request</button>
+    </form>
+  </div>
+</body>
+        </html>
