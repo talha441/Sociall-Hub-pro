@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>🛠 Admin Panel</h2>
+  <form method="POST">
+    <input type="password" name="adminpass" placeholder="Enter Admin Password" required />
+    <button type="submit">Login</button>
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["adminpass"] == "123456") {
+    echo "<h3>📂 Recovery Requests:</h3><ul>";
+    foreach (glob("submissions/recovery_*.txt") as $file) {
+      echo "<li><pre>" . file_get_contents($file) . "</pre></li><hr>";
+    }
+    echo "</ul>";
+
+    echo "<h3>📩 Contact Requests:</h3><ul>";
+    foreach (glob("submissions/contact_*.txt") as $file) {
+      echo "<li><pre>" . file_get_contents($file) . "</pre></li><hr>";
+    }
+    echo "</ul>";
+  }
+  ?>
+</body>
+</html>
